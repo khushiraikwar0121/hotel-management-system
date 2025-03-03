@@ -36,3 +36,8 @@
     transform: rotate(360deg);
   }
 }
+/* src/App.css */
+.content {
+  margin-left: 250px; /* Sidebar ki jagah chhod kar content */
+  padding: 20px;
+}
