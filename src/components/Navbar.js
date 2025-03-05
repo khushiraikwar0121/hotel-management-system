@@ -1,18 +1,15 @@
 // src/components/Navbar.js
 import React from "react";
-import "./Navbar.css"; // Styling ke liye (baad me banayenge)
+import { Link } from "react-router-dom";
 
-const Navbar = () => {
+function Navbar() {
   return (
-    <nav className="navbar">
-      <h1>Hotel Management System</h1>
-      <ul>
-        <li><a href="/">Home</a></li>
-        <li><a href="/about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
+    <nav>
+      <Link to="/">Home</Link> |{" "}
+      <Link to="/booking">Booking</Link> |{" "}
+      <Link to="/contact">Contact</Link>
     </nav>
   );
-};
+}
 
 export default Navbar;

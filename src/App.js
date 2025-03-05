@@ -1,20 +1,23 @@
- src/App.js
 import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Navbar from "./components/Navbar";
 import Sidebar from "./components/Sidebar";
+import Home from "./pages/Home";
+import Booking from "./pages/Booking";
+import Contact from "./pages/Contact";
 
-const App = () => {
+function App() {
   return (
-    <div>
+    <Router>
       <Navbar />
       <Sidebar />
-      <div className="content">
-        <h2>Welcome to the Hotel Management Dashboard!</h2>
-      </div>
-    </div>
+      <Routes>
+        <Route path="/home" element={<Home />} />
+        <Route path="/booking" element={<Booking />} />
+        <Route path="/contact" element={<Contact />} />
+      </Routes>
+    </Router>
   );
-};
+}
 
 export default App;
-
-src/components/Sidebar.js
